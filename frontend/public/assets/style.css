@@ -1,0 +1,18 @@
+#exit {
+    transition: 0.5s;
+}
+
+#a:hover>#exit {
+    transform: translateY(-3px) rotate(-90deg) translateY(-3px);
+    transition: 0.5s;
+}
+a{
+    user-select: none;
+}
+
+#profile:hover{
+    
+    filter: brightness(0.69);
+    cursor: pointer;
+    user-select: none;
+}
