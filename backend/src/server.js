@@ -19,6 +19,7 @@ const { decode } = require("punycode/");
 const SECRET_KEY = process.env.JWT_SECRET || "secretkey";
 const ACCESS_SECRET_KEY = process.env.JWT_ACCESS_SECRET || "secretkey";
 const REFRESH_SECRET_KEY = process.env.JWT_REFRESH_SECRET || "secretkey";
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:8080";
 
 //Pasar de http a https
 const https = require("https");
@@ -57,7 +58,7 @@ app.use(morgan('combined'))
 
 
 const cors_options = {
-  origin: ["http://localhost:8080"],
+  origin: CORS_ORIGIN,
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
