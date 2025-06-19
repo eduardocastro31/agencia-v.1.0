@@ -42,16 +42,6 @@ app.set("views", path.join(__dirname, "../frontend/views"));
 
 bd.run();
 
-const options = {
-  key: fs.readFileSync(
-    "C:/Users/Eduardo/dev/pweb-3/tp-fullStack/backend/server.key"
-  ),
-  cert: fs.readFileSync(
-    "C:/Users/Eduardo/dev/pweb-3/tp-fullStack/backend/server.cert"
-  ),
-};
-
-
 ////// LOGS EN CONSOLA //////
 app.use(morgan('combined'))
 
